@@ -6,7 +6,7 @@ This project is an example of an ApiConnector contract for Starknet that allows 
 - [Contract Creation](#contract-creation)
 - [Configuration](#configuration)
 - [Deployment](#deployment)
-  - [Create an account and obtain test tokens](#create-an-account-and-obtain-test-tokens)
+  - [Create an account](#create-an-account)
   - [Deploy the contract on the Starknet network](#deploy-the-contract-on-the-starknet-network)
 
 ## Addresses
@@ -74,15 +74,13 @@ let requestparams: Array<felt252> = array![
 
 ## Deployment
 
-### Create an account and obtain test tokens
+### Create an account
 
 Before deploying the contract, you need to create an account and get url for rpc:
 
 1. Create an account using Braavos wallet:
 
    - Visit [Braavos](https://braavos.app/) and follow the instructions to create a new account.
-
-   - Go to [Starknet Goerli Faucet](https://faucet.goerli.starknet.io/) to receive test ETH tokens for your account.
 
    - Deploy your account. Simple variant - send some ETH tokens to another account.
 
@@ -105,7 +103,6 @@ scarb build
 ```
 
 2. Declare the contract
-   sncast --account test4 declare --url https://starknet-sepolia.g.alchemy.com/starknet/version/rpc/v0_7/X3vF_UblZ81YcouqzmK_1obRz9yXLYwL -c ApiConnector --version v2
 
 ```
 sncast --account <account name> declare --url <rpc url> --contract-name <contract name> --version v2
